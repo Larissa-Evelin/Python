@@ -1,0 +1,10 @@
+import random
+import math
+
+ print(random.random()) - FUNÇÃO QUE GERA UM NUMERO ALEATORIO
+
+ print(math.ceil(10 * random.random())) - SINTAXE(NUMERO ALEATORIO DE 0 A 10)
+
+print(random.choice([2, 3, 4, 6, 7, 8, 10, 9])) - LISTA DE ITENS ALEATORIO
+
+print(random.choice(["laranja", "banana", "mamao", "abacaxi", "limao", "damasco"])) - LISTA DE ITENS ALEATORIO STRING
