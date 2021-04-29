@@ -1,4 +1,4 @@
-nota1 = 6.00
+nota1 = 1.00
 nota2 = 7.00
 media = (nota1 + nota2) / 2
 
@@ -6,4 +6,8 @@ if media >= 7.00:
     print("Aluno aprovado %f" % media)
     print("Parabens")
 
+else:
+    print("aluno reprovado %f" % media)
+    
 print("media é %f" % media)
+    
