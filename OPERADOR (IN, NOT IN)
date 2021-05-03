@@ -3,3 +3,10 @@ if "laranja" in L:
     print("fruta incontrada")
 else:
     print("fruta não esta na lista")
+    
+    
+    L = ["Python", "Ruby", "Java", "C#"]
+if "PHP" not in L:
+    print("linguagem não enontrada")
+else:
+    print("linguagem cadastrada")
