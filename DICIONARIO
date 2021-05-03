@@ -1,0 +1,10 @@
+dic = {'produto' : 'tigela', 'cor' : 'azul','preço' : 14}
+print(dic)
+
+d = {}
+
+d [ 'nome'] = 'Larissa'
+d ['sobrenome'] = 'Evelin'
+d ['empresa'] = 'boson'
+
+print(d['nome'])
