@@ -44,3 +44,49 @@ False
 >>> L.count(2) - CONTAGEM DE OCORRÊNCIAS DE X VALOR
 2
 >>> 
+
+L.sort() - ORDENAR A LISTA 
+>>> L.reverse() - REVERTER A LISTA
+L.remove(x) - REMOVE A PRIMEIRA OCORRENCIA DO ITEM
+L.pop(pos) - REMOVE ITEM NA POSIÇÃO DE INDICE ESPECIFICADA
+del L [pos] - REMOVE ITEM NA POSIÇÃO DE INDICE ESPECIFICADA
+L[i] = VALOR ATRIBUIÇÃO DE VALOR A POSIÇÃO I
+L[i:j] = [x1, x2, x3] - CIRAR A LISTA L2 COM OS ELEMENTOS DE L INCREMENTADOS
+len(L) - RETORNA O TAMANHO DA LISTA 
+list(L) - RETORNA OS ELEMENTOS DA LISTA
+map(f, lista)- APLICA A FUNÇÃO f A CADA UM DOS ELEMENTOS DA LISTA ; PARA VER O RESULTADO, COMBINE COM LIST()
+del L [i:j]
+>>> list(L)
+[6, 5, 4, 3, 2, 1]
+>>> L.remove(2)
+>>> list(L)
+[6, 5, 4, 3, 1]
+>>> L.pop(2)
+4
+>>> list(L)
+[6, 5, 3, 1]
+>>> list(L)
+[6, 5, 3, 1]
+>>> del L[2]
+>>> list(L)
+[6, 5, 1]
+>>> del L[1: 2]
+>>> list(L)
+[6, 1]
+>>> L.append(8)
+>>> list (L)
+[6, 1, 8]
+>>> L2 = [6, 1, 8]
+>>> L2 = [x + 1 for x in L]
+>>> list (L)
+[6, 1, 8]
+>>> list(L2)
+[7, 2, 9]
+>>> L3 = [x ** 10 for x in L]
+>>> list(L3)
+[60466176, 1, 1073741824]
+>>> len(L)
+3
+>>> import math
+>>> list (map(math.sqrt, L))
+[2.449489742783178, 1.0, 2.8284271247461903]
