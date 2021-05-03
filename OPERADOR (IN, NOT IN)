@@ -1,0 +1,5 @@
+L = ["laranja", "abacate", "limao", "uva"]
+if "laranja" in L:
+    print("fruta incontrada")
+else:
+    print("fruta não esta na lista")
