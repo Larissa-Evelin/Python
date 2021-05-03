@@ -10,3 +10,10 @@ if "PHP" not in L:
     print("linguagem não enontrada")
 else:
     print("linguagem cadastrada")
+
+
+palavra = "Python"
+if "a" in palavra:
+    print("Letra encontrada")
+else:
+    print("Letra não encontrada")
