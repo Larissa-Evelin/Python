@@ -8,3 +8,11 @@ d ['sobrenome'] = 'Evelin'
 d ['empresa'] = 'boson'
 
 print(d['nome'])
+
+R['nome'] - RETORNA O NOME COMPLETO
+R['nome']['primeiro'] - RETORNA O PRIMEIRO NOME 
+R['conhecimentos'] - RETORNA A LISTA COMPLETA
+R['conhecimento'][-1] - ULTIMO ELEMENTO DA LISTA
+R['conhecimentos'].append('IPv6') - INSERE UM ITEM NA LISTA
+
+R = {'nome' : {'primeiro' : 'Larissa', 'ultimo' : 'Evelin'}, 'conhecimentos' : ['Python', 'C++', 'Ruby'], 'idade' : 37} - Aninhamento de Dicionários e Listas; Inclusão de valores 
