@@ -1,0 +1,18 @@
+
+T = ('abacaxi', 'abacate', 'carambola', 'pitanga') # CRIANDO UMA LISTA
+U = ('palavra', 2, ['a', 'b', 'c']) # CRIANDO TUPLAS 
+
+
+>>> len(U)  # COMPRIMENTO DA TUPLA T
+3
+>>> T.index('carambola') # POSIÇÃO DO ITEM 'ABACATE'
+2
+>>> T.count('carambola') # NUMERO DE OCORRENCIAS DE 'ABACAXI'
+1
+>>> print(T[3]) # RETORNA PRIMEIRO ELEMENTO DA TUPLA
+pitanga
+>>> print(U[2][0]) # RETORNA ELEMENTO 0 DENTRO DO ELEMENTO 2 DA TUPLA(a LISTA)
+a
+>>> print(U[2][2]) # RETORNA ELEMENTO 0 DENTRO DO ELEMENTO 2 DA TUPLA(c LISTA)
+c
+          
