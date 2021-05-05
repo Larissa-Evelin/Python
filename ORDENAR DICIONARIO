@@ -1,0 +1,8 @@
+D = {'b' : 2, 'a' : 1, 'd' : 4, 'c' : 3}
+#ordenada = list(D.keys()) #DESTAA FORMA 
+#ordenada.sort()
+#for Key in ordenada:
+    #print(Key, '=', D[Key])
+
+for key in sorted(D): # DESTA FORMA
+    print(key, '=', D[key])
