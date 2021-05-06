@@ -1,0 +1,25 @@
+def mensagem ():
+    print('Larissa Evelin Nogueira Matos')
+
+mensagem()    
+--------------------------------------------------------
+
+x = 10
+y = 30
+
+def soma (a, b):
+    return a + b
+
+r = soma(x, y)    
+   
+print(r)
+--------------------------------------------------------
+
+def quadrado (valores):
+    quadrado = []
+    for x in valores:
+        quadrado.append(x ** 2)
+    return quadrado
+resultado = quadrado(valores)
+for y in resultado:
+    print(y)
