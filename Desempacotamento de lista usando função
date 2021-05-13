@@ -1,0 +1,6 @@
+def listar_itens(w, x, y, z):
+    print(w, x, y, z)
+
+lista = [21, 22, 67, 69]
+
+listar_itens(*lista) #LEMBRANDO DE SEMPRE QUE USAR ESTE RECURSO SEMPRE COLOCAR O *
