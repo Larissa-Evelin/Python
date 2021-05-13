@@ -1,0 +1,8 @@
+def contar (valor = 11, caractere = "+"):
+    for i in range(1, valor):
+        print(caractere)
+contar()
+print("Passando um caractere diferente:")
+contar(caractere = "&")
+print("passando um valor diferente")
+contar(valor = 5)
