@@ -1,4 +1,4 @@
-manipulador = open('arquivo.txt','r')
+manipulador = open('arquivo.txt','r') # ABRINDO O ARQUIVO
 print("\nMetodo read():\n")
 print(manipulador.read())
 
@@ -13,4 +13,48 @@ manipulador.seek(0)
 print("\nMetodo redlines():\n")
 print(manipulador.readlines())
 
-manipulador.close()
+manipulador.close() # FECHANDO O ARQUIVO
+
+#################################################################################
+
+manipulador = open('arquivo.txt', 'r')
+for linha in manipulador:
+    linha = linha.rstrip()
+    print(linha)
+manipulador.close()    
+
+#################################################################################
+
+print("\nContando as linhas do arquivo de texto analisado:\n")
+contador = 0
+arq = open('arquivo.txt', 'r') # CONTANDO AS LINHAS DO ARQUIVO
+for linha in arq:
+    contador =+ 1
+print("Numero de linhas no arquivo:", contador)
+arq.close()
+
+#################################################################################
+
+print("\nRETORNANDO SOMENTE AS LINHAS QUE POSSUEM A PALAVRA L:\n")
+arq = open('arquivo.txt', 'r')
+contador = 0
+for linha in arq:
+    linha = linha.rstrip()
+    if 'L' in linha:
+        contador =+ 1
+print("FORAM ENCONTRADOS:", contador, "A LETRA")
+arq.close()
+
+#################################################################################
+
+print("\nRETORNANDO SOMENTE AS LINHAS QUE POSSUEM A PALAVRA L:\n")
+palavra = input("Digite a palavra para a busca:") # GUARDANDO O VALOR QUE O USUARIO DIGITAR DENTRO DA VARIAVEL PALAVRA
+arq = open('arquivo.txt', 'r')
+contador = 0
+for linha in arq:
+    linha = linha.rstrip()
+    if palavra in linha:
+        contador =+ 1
+        print(linha)
+print("FORAM ENCONTRADOS:", contador, "LETRA")
+arq.close()
