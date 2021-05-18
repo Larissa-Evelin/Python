@@ -1,0 +1,28 @@
+arquivo = open('arq01.txt', 'w')       # CRIANDO O ARQUIVO
+arquivo.write("LARISSA EVELIN\n")
+arquivo.write("CRIANDO UM ARQUIVO DE TEXTO COM PYTHON\n")
+arquivo.write("ARQUIVO CRIADO POR LARISSA EVELIN\n")
+arquivo.close()
+
+
+arquivo = open('arq01.txt', 'r')         # LENDO O ARQUIVO
+for linha in arquivo:
+    linha = linha.rstrip()
+    print(linha)
+arquivo.close()    
+
+######################################################################################
+
+print("\n")
+texto = input("Digite uma frase para acrescentar ao arquivo:")
+arquivo = open('arq01.txt', 'a')
+arquivo.write(texto + "\n")
+print("Operação concluida no arquivo\n " + arquivo.name)
+arquivo.close()
+
+print("\nTexto alterado:")
+arquivo = open('arq01.txt', 'r')
+for linha in arquivo:
+    linha = linha.rstrip()
+    print(linha)
+arquivo.close()    
