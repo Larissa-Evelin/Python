@@ -1,0 +1,14 @@
+a = int (input("entre com o primeiro valor"))
+b =  int(input("entre com o segundo valor"))
+soma = a + b
+multiplicação = a * b
+divisao = a / b
+subtração = a - b
+resto = a % b
+
+print('soma {soma}'. format(soma=soma))
+print('soma:' + str(soma))
+print(multiplicação)
+print(int(divisao))
+print(subtração)
+print(resto)
