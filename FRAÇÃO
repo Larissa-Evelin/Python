@@ -1,0 +1,4 @@
+from fractions import Fraction
+F = Fraction(1/2)
+
+print(F)
