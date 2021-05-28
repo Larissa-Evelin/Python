@@ -2,19 +2,26 @@ import mysql.connector
 from mysql.connector import Error
 
 try:
-    con = mysql.connector.connect(host = 'localhost',database = 'cadastro',user = 'root', password = 'abc123')
+    con = mysql.connector.connect(host = 'localhost',database = 'cadastro', user = 'root', password = '')
 
     consulta_sql = "select * from pessoas"
     cursor = con.cursor()
     cursor.execute(consulta_sql)
-    linhas = cursor.fetcharll()
+    linhas = cursor.fetchall()
     print("Numero total de registros retornados: ", cursor.rowcount)
 
     print("\nMostrando os autores cadastrados")
     for linha in linhas:
         print("id:", linha[0])
         print("nome: ", linha[1])
-        print("Nascimento:", linha[2], "\n")
+        
+        print("Nascimento:", linha[2])
+
+        print("sexo: ", linha[3])
+        print("peso: ", linha[4])
+        print("altura: ", linha[5])
+        print("nascionalidade: ", linha[6], "\n")
+        
 except Error as e:
     print("Erro ao acessar tabela Mysql", e)
 finally:
@@ -22,3 +29,5 @@ finally:
         con.close()
         cursor.close()
         print("Conexão ao MySql encerrada")
+        
+# pip install mysql-connector-python - OBS: SEMPRE REALIZAR O IMPORT VIA CMD 
