@@ -1,0 +1,24 @@
+import mysql.connector
+from mysql.connector import Error
+
+try:
+    con = mysql.connector.connect(host = 'localhost',database = 'cadastro',user = 'root', password = 'abc123')
+
+    consulta_sql = "select * from pessoas"
+    cursor = con.cursor()
+    cursor.execute(consulta_sql)
+    linhas = cursor.fetcharll()
+    print("Numero total de registros retornados: ", cursor.rowcount)
+
+    print("\nMostrando os autores cadastrados")
+    for linha in linhas:
+        print("id:", linha[0])
+        print("nome: ", linha[1])
+        print("Nascimento:", linha[2], "\n")
+except Error as e:
+    print("Erro ao acessar tabela Mysql", e)
+finally:
+    if (con.is_connected()):
+        con.close()
+        cursor.close()
+        print("Conexão ao MySql encerrada")
