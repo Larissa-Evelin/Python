@@ -1,0 +1,21 @@
+import mysql.connector
+
+try:
+    con = mysql.connector.connect(host = 'localhost', database = 'cadastro', user = 'root', password = '')
+    criar_tabela_SQL = """ CREATE TABLE tbl_Produtos (
+                              IdProduto int(11) NOT NULL,
+                              NomeProduto VARCHAR (70) NOT NULL,
+                              Preço FLOAT NOT NULL,
+                              Quantidade TINYINT NOT NULL,
+                              PRIMARY KEY (idProduto)) """
+
+    cursor = con.cursor()
+    cursor.execute(criar_tabela_SQL)
+    print("Tabela de produtos criada com sucesso!")
+except mysql.connector.Error as erro:
+    print("Falha ao criar tabela no MySQL: {}".format(erro))
+finally:
+    if (con.is_connected()):
+        cursor.close()
+        con.close()
+        print("Conexão ao MySQL finalizada.")
