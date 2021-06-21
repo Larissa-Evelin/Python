@@ -1,0 +1,30 @@
+import mysql.connector
+from mysql.connector import Error
+
+# INSERIR REGISTROS EM UM BANCO DE DADOS MYSQL
+
+print("Rotina para cadastro de produtos no banco de dados")
+print("Entre com os dados conforme solicitado")
+
+nome = input ("NOME DO PAIS:")
+continente = input ("CONTINENTE:")
+populacao = input ("POPULAÇAO:")
+
+dados = nome + ',\''  + continente + '\',' + populacao + ')'
+declaracao = """ INSERT INTO pais
+(nome, continente, populacao)
+VALUES ("""
+
+sql = declaracao + dados
+
+try:
+    con = mysql.connector.connect(host = 'localhost', database = 'mundo', user = 'root', password = '')
+
+    inserir_produtos = sql
+    cursor = con.cursor()
+    cursor.execute(inserir_produtos)
+    con.commit()
+    print(cursor.rowcount, "registros inseridos na tabela!")
+    cursor.close()
+except Error as erro:
+    print("Falha ao inserir dados no Mysql: {}".format(erro))
