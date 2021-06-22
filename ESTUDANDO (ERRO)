@@ -1,0 +1,54 @@
+def insertData(query, hostname, database, user, password):
+    import mysql.connector
+    from mysql.connector import Error
+    # INSERIR REGISTROS EM UM BANCO DE DADOS MYSQL
+
+    try:
+        con = mysql.connector.connect(host=hostname, database=database, user=user, password=password)
+        cursor = con.cursor()
+        cursor.execute(query)
+        con.commit()
+        print(cursor.rowcount, "registros inseridos na tabela!")
+        cursor.close()
+    except Error as erro:
+        print(f"Falha ao inserir dados no Mysql: {0}", erro)
+print("\n")
+
+
+#==================================================================
+
+controle = ''
+while(controle != 's'):
+    print('a.Registrar no banco de dados')
+    print('b.Consultar os dados')
+    print('s.Sair')
+    controle = input('Digite a opção desejada:')
+    if(controle == 'a'):
+        
+        print("=-=" * 15) #separação de linha
+        print("Rotina para cadastro de produtos no banco de dados")
+        print("Entre com os dados conforme solicitado")
+        print("=-=" * 15) #separação de linha
+        nome = input ("NOME DO PAIS: ")
+        continente = input ("CONTINENTE: ")
+        populacao = input ("Populaçao: ")
+        sqlQuery = f"insert into pais (nome, continente, populacao) values ('{nome}', '{continente}', '{populacao}')"
+        insertData(sqlQuery, 'localhost', 'mundo', 'root', '')
+
+#ERRO
+    if(controle == 'b'):
+        consulta_sql = "select * from pessoas"
+        insertData('localhost', 'mundo', 'root', '')
+        cursor = con.cursor()
+        cursor.execute(consulta_sql)
+        linhas = cursor.fetcharll()
+        print("Numero total de registros retornados: ", cursor.rowcount)
+        print("\nMostrando os autores cadastrados")
+        
+        for linha in linhas:
+           print("Nome:", linha[0])
+           print("Continente: ", linha[1])
+           print("Populacao:", linha[2], "\n")
+
+    
+#===============================================================
