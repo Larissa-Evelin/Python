@@ -1,16 +1,29 @@
-import mysql.connector
-from mysql.connector import Error
+import mysql.connectordef insertData(query, hostname, database, user, password):
+    import mysql.connector
+    from mysql.connector import Error
+    # INSERIR REGISTROS EM UM BANCO DE DADOS MYSQL
+    try:
+        con = mysql.connector.connect(host=hostname, database=database, user=user, password=password)
+        cursor = con.cursor()
+        cursor.execute(query)
+        con.commit()
+        print(cursor.rowcount, "registros inseridos na tabela!")
+        cursor.close()
+    except Error as erro:
+        print(f"Falha ao inserir dados no Mysql: {0}", erro)
+print("\n")
 
-# INSERIR REGISTROS EM UM BANCO DE DADOS MYSQL
 
+#==================================================================
+print("=-=" * 15) #separação de linha
 print("Rotina para cadastro de produtos no banco de dados")
 print("Entre com os dados conforme solicitado")
-
-nome = input ("NOME DO PAIS:")
-continente = input ("CONTINENTE:")
-populacao = input ("POPULAÇAO:")
-
-dados = nome + ',\''  + continente + '\',' + populacao + ')'
+print("=-=" * 15) #separação de linha
+nome = input ("NOME DO PAIS: ")
+continente = input ("CONTINENTE: ")
+populacao = input ("Cidade: ")
+sqlQuery = f"insert into pais (nome, continente, populacao) values ('{nome}', '{continente}', '{populacao}')"
+insertData(sqlQuery, 'localhost', 'mundo', 'root', '')
 declaracao = """ INSERT INTO pais
 (nome, continente, populacao)
 VALUES ("""
